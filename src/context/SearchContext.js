@@ -2,7 +2,7 @@ import React from 'react'
 
 const SearchContext = React.createContext({
   username: '',
-  apiToken: '',
+  apiToken: process.env.REACT_APP_GITHUB_TOKEN,
   onChangeUsername: () => {},
 })
 
