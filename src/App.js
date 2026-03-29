@@ -23,7 +23,7 @@ class App extends Component {
       <SearchContext.Provider
         value={{
           username,
-          apiToken: '',
+          apiToken: process.env.REACT_APP_GITHUB_TOKEN,
           onChangeUsername: this.onChangeUsername,
         }}
       >
