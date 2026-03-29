@@ -1,0 +1,297 @@
+/* --- Base Containers --- */
+.details-route-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.details-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 5%;
+  width: 100%;
+}
+
+/* --- Status Views (Loading & Failure) --- */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.landing-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.status-image {
+  max-width: 100%;
+  width: 400px;
+}
+
+.failure-text {
+  color: #cbd5e1;
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* --- Success View Layout --- */
+.repo-details-success-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  gap: 32px;
+}
+
+/* --- Top Header Card --- */
+.details-header-card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 32px;
+  width: 100%;
+}
+
+.details-repo-title {
+  color: #3b82f6;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.details-repo-description {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* --- The Flex-Wrap Magic: Languages --- */
+.details-languages-list {
+  display: flex;
+  flex-wrap: wrap; /* Perfect mobile wrap! */
+  gap: 12px;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+.language-pill {
+  background-color: rgba(51, 65, 85, 0.5); /* Semi-transparent dark bg */
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dynamic Language Colors */
+.lang-color-0 {
+  color: #3b82f6;
+} /* Blue */
+.lang-color-1 {
+  color: #f59e0b;
+} /* Orange */
+.lang-color-2 {
+  color: #10b981;
+} /* Emerald */
+.lang-color-3 {
+  color: #8b5cf6;
+} /* Purple */
+.lang-color-4 {
+  color: #ef4444;
+} /* Red */
+
+/* --- Card Stats --- */
+.details-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.details-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-icon {
+  font-size: 20px;
+}
+
+.star-icon {
+  color: #eab308; /* Yellow Star */
+}
+
+.fork-icon {
+  color: #cbd5e1; /* Gray Fork */
+}
+
+.stat-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* --- Commits & Issues Count Section --- */
+.counts-container {
+  display: flex;
+  flex-direction: row; /* Desktop: side-by-side */
+  gap: 24px;
+  width: 100%;
+}
+
+.count-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3b82f6; /* Figma outlined box */
+  border-radius: 8px;
+  padding: 24px;
+  background-color: transparent;
+}
+
+.count-label {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.count-value {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* --- Contributors Section --- */
+.contributors-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-subtitle {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.contributors-count {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* Overlapping Avatars Magic */
+.contributors-avatar-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.contributor-avatar-item {
+  margin-left: -12px; /* Pulls images to the left so they overlap */
+  transition: transform 0.2s ease;
+}
+
+.contributor-avatar-item:first-child {
+  margin-left: 0; /* Keeps the first one in place */
+}
+
+.contributor-avatar-item:hover {
+  transform: translateY(-4px);
+  z-index: 10;
+}
+
+.contributor-avatar-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #1e293b; /* Creates a clean gap between overlapping images */
+  background-color: #334155;
+}
+
+.extra-count-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e2e8f0;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #1e293b;
+  z-index: 1;
+}
+
+/* --- Doughnut Chart Section --- */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.pie-chart-wrapper {
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================
+   Mobile Responsiveness (Screens < 768px)
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .details-content-container {
+    padding: 32px 5%;
+  }
+
+  .details-header-card {
+    padding: 24px;
+  }
+
+  .details-repo-title {
+    font-size: 24px;
+  }
+
+  /* The crucial mobile alignment flip! */
+  .counts-container {
+    flex-direction: column; /* Mobile: vertically stacked */
+    gap: 16px;
+  }
+
+  .pie-chart-wrapper {
+    padding: 16px 0;
+  }
+}

@@ -1,0 +1,274 @@
+/* --- Base Containers --- */
+.repositories-route-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.repositories-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 5%;
+  width: 100%;
+}
+
+/* --- Status & Empty Views --- */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.status-image {
+  max-width: 100%;
+  width: 350px;
+  margin-bottom: 32px;
+}
+
+.repositories-status-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.empty-text,
+.failure-text {
+  color: #cbd5e1;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+  background-color: #2563eb;
+}
+
+/* =========================================
+   Mobile Responsiveness for Empty View
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .status-container {
+    margin-top: 40px;
+  }
+
+  .status-image {
+    width: 280px;
+    margin-bottom: 24px;
+  }
+
+  .repositories-status-title {
+    font-size: 24px;
+  }
+
+  .empty-text,
+  .failure-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+/* --- Success View Layout --- */
+.repositories-success-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px; /* Constrains max width perfectly on Desktop */
+}
+
+.repositories-page-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.repositories-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* --- The Repository Cards --- */
+.repo-card-item {
+  background-color: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+}
+
+/* Hover "Wow" Effect */
+.repo-card-item:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+}
+
+.repo-card-link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Card Content --- */
+.repo-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.repo-owner-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #3b82f6;
+}
+
+.repo-title {
+  color: #3b82f6;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.repo-description {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* --- The Flex-Wrap Magic: Languages --- */
+.repo-languages-list {
+  display: flex;
+  flex-wrap: wrap; /* This prevents the box from breaking! */
+  gap: 12px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.language-pill {
+  background-color: rgba(51, 65, 85, 0.5); /* Semi-transparent dark bg */
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Dynamic Language Colors */
+.lang-color-0 {
+  color: #3b82f6;
+} /* Blue */
+.lang-color-1 {
+  color: #f59e0b;
+} /* Orange */
+.lang-color-2 {
+  color: #10b981;
+} /* Emerald */
+.lang-color-3 {
+  color: #8b5cf6;
+} /* Purple */
+.lang-color-4 {
+  color: #ef4444;
+} /* Red */
+
+/* --- Card Stats (Bottom Left) --- */
+.repo-stats-container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-top: auto; /* Pushes stats to the very bottom */
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-icon {
+  font-size: 20px;
+}
+
+.star-icon {
+  color: #eab308; /* Yellow Star */
+}
+
+.fork-icon {
+  color: #cbd5e1; /* Gray Fork */
+}
+
+.stat-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* =========================================
+   Mobile Responsiveness (Screens < 768px)
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .repositories-content-container {
+    padding: 32px 5%;
+  }
+
+  .repositories-page-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .repo-card-link {
+    padding: 24px;
+  }
+
+  .repo-title {
+    font-size: 20px;
+  }
+
+  .repo-description {
+    font-size: 14px;
+  }
+
+  .language-pill {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  .repo-stats-container {
+    gap: 24px;
+  }
+}

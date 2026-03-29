@@ -1,0 +1,215 @@
+/* --- Base Containers --- */
+.analysis-route-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.analysis-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 5%;
+  width: 100%;
+}
+
+/* --- Status & Empty Views --- */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.status-image {
+  max-width: 100%;
+  width: 350px;
+  margin-bottom: 32px;
+}
+
+/* Make sure this is centered, not flex-start! */
+.analysis-status-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.empty-text,
+.failure-text {
+  color: #cbd5e1;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.2s ease;
+}
+
+.retry-button:hover {
+  background-color: #2563eb;
+}
+
+/* =========================================
+   Mobile Responsiveness for Empty View
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .status-container {
+    margin-top: 40px;
+  }
+
+  .status-image {
+    width: 280px;
+    margin-bottom: 24px;
+  }
+
+  .analysis-status-title {
+    font-size: 24px;
+  }
+
+  .empty-text,
+  .failure-text {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Analysis Profile Info */
+.analysis-user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+.analysis-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.analysis-login {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* --- Success View Layout --- */
+.analysis-success-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 32px;
+}
+
+.analysis-page-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* --- The Chart Cards --- */
+.chart-card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pie-chart-wrapper {
+  height: 350px;
+}
+
+/* --- Alignment Grids --- */
+.full-width-chart {
+  width: 100%;
+}
+
+.charts-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.half-width-chart {
+  flex: 1;
+  width: 50%;
+}
+
+/* =========================================
+   Mobile Responsiveness (Screens < 768px)
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .analysis-content-container {
+    padding: 32px 5%;
+  }
+
+  .analysis-page-title {
+    font-size: 24px;
+  }
+
+  .chart-card {
+    padding: 24px 16px;
+  }
+
+  .chart-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .charts-row {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .half-width-chart {
+    width: 100%;
+  }
+
+  .line-chart-wrapper {
+    height: 250px;
+  }
+
+  .pie-chart-wrapper {
+    height: 350px;
+  }
+}

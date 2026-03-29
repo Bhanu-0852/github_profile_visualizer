@@ -1,0 +1,315 @@
+/* --- Base Containers --- */
+.home-route-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  padding: 40px 5%;
+}
+
+/* --- Search Wrapper & Bar --- */
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+/* Error State Classes */
+.search-bar-error {
+  border: 1px solid #ef4444; /* Figma Red */
+}
+
+.error-message {
+  color: #ef4444; /* Figma Red */
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 4px;
+  text-align: left;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #334155;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+/* Error State Classes */
+.search-bar-error {
+  border: 1px solid #ef4444; /* Figma Red */
+}
+
+.error-message {
+  color: #ef4444; /* Figma Red */
+  font-size: 14px;
+  margin-top: 8px;
+  margin-left: 4px; /* Slightly indents the text to match Figma */
+}
+
+/* --- Search Inputs --- */
+.search-input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 12px 20px;
+  outline: none;
+}
+
+.search-button {
+  background-color: #3b82f6;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background-color: #2563eb;
+}
+
+.search-icon {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+/* --- Status Views (Initial, Loading, Failure) --- */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.landing-title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.status-image {
+  max-width: 100%;
+  width: 400px;
+}
+
+.failure-text {
+  color: #cbd5e1;
+  font-size: 20px;
+  margin-top: 24px;
+}
+
+.retry-button {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* --- Profile Card (Success View) --- */
+.profile-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 20px;
+}
+
+.profile-avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  border: 4px solid #1e293b;
+}
+
+.profile-name {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.profile-login {
+  color: #cbd5e1;
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.profile-bio {
+  color: #94a3b8;
+  font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* --- Profile Stats --- */
+.profile-stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.stat-value {
+  color: #3b82f6;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.stat-separator {
+  width: 1px;
+  height: 40px;
+  background-color: #334155;
+}
+
+/* --- Profile Details (Desktop Layout) --- */
+.profile-details-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.detail-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 200px;
+}
+
+.detail-block-title {
+  color: #3b82f6;
+  font-size: 14px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.detail-icon {
+  color: #cbd5e1;
+  font-size: 20px;
+}
+.profile-bio-label {
+  color: #cbd5e1;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.detail-text {
+  color: #cbd5e1;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.blog-link {
+  text-decoration: none;
+}
+
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   Mobile Responsiveness (Screens < 768px)
+   ========================================= */
+@media screen and (max-width: 767px) {
+  .landing-title {
+    font-size: 24px;
+  }
+
+  .status-image {
+    width: 280px;
+  }
+
+  .profile-stats-container {
+    justify-content: space-between;
+  }
+
+  .stat-box {
+    padding: 0 10px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .stat-label {
+    font-size: 10px;
+  }
+
+  .profile-details-container {
+    justify-content: space-between;
+    row-gap: 32px;
+    column-gap: 0;
+  }
+
+  .detail-block {
+    min-width: auto;
+  }
+
+  .company-block,
+  .location-block {
+    width: 50%;
+    align-items: center;
+  }
+
+  .url-block {
+    width: 100%;
+    align-items: center;
+  }
+}
