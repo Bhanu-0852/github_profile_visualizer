@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #0b0f19; /* Standard dark background */
+  background-color: #0b0f19;
 }
 
 .home-content-container {
@@ -32,7 +32,7 @@
 }
 
 .search-bar-error {
-  border-color: #ef4444; /* Figma Red for error */
+  border-color: #ef4444; 
 }
 
 .search-input {
@@ -115,7 +115,7 @@
    Profile Card (Success View)
    ========================================= */
 .profile-card-container {
-  background-color: #111827; /* Dark blue Figma card */
+  background-color: #111827; 
   border: 1px solid #334155;
   border-radius: 16px;
   padding: 40px 32px;
@@ -153,14 +153,14 @@
 
 /* Bio Section - Centered exactly like Figma */
 .profile-bio-label {
-  display: none; /* Hides the word "BIO" to match Figma */
+  display: none; /* Hides the word "BIO" */
 }
 
 .profile-bio {
   color: #94a3b8;
   font-size: 16px;
   line-height: 1.6;
-  text-align: center; /* Centers the text */
+  text-align: center; 
   margin: 0 auto 32px auto;
   max-width: 450px;
 }
@@ -189,11 +189,11 @@
 .stat-separator {
   width: 1px;
   height: 50px;
-  background-color: #334155; /* The vertical line */
+  background-color: #334155; 
 }
 
 .stat-value {
-  color: #3b82f6; /* Figma Blue */
+  color: #3b82f6; 
   font-size: 24px;
   font-weight: bold;
   margin: 0 0 8px 0;
@@ -210,65 +210,64 @@
    Details Section (Company, Blog, Location)
    ========================================= */
 .profile-details-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  row-gap: 32px;
+  display: flex;
+  flex-wrap: wrap; /* Allows the Blog to wrap to the next line */
+  justify-content: center;
   width: 100%;
+  margin-top: 16px;
 }
 
 .detail-block {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Centers the title and the text block like Figma */
 }
 
-/* Forces Company to Top Left */
 .company-block {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  align-items: flex-start;
+  order: 1; /* Forces Company to be 1st */
+  width: 50%; /* Takes up left half */
 }
 
-/* Forces Location to Top Right */
 .location-block {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-  align-items: flex-end; 
+  order: 2; /* Forces Location to be 2nd (next to Company) */
+  width: 50%; /* Takes up right half */
 }
 
-/* Forces Blog URL to Bottom Center */
 .url-block {
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
-  align-items: center;
+  order: 3; /* Forces Blog to be 3rd (on the bottom) */
+  width: 100%; /* Takes up the full bottom row so it centers perfectly */
+  margin-top: 32px; /* Adds space between the top row and bottom row */
 }
 
 .detail-block-title {
-  color: #94a3b8;
-  font-size: 14px;
-  margin: 0 0 8px 0;
+  color: #3b82f6; /* Corrected to Figma Blue! */
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
 }
 
 .detail-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .detail-icon {
-  color: #cbd5e1;
-  font-size: 20px;
+  color: #f8fafc; /* Bright white/light grey for the icons */
+  font-size: 22px;
 }
 
 .detail-text {
-  color: #ffffff;
+  color: #f8fafc; /* Crisp white for the values */
   font-size: 16px;
+  font-weight: 400;
   margin: 0;
   word-break: break-word;
 }
 
 .blog-link {
+  color: #f8fafc;
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .blog-link:hover {
@@ -285,20 +284,16 @@
   }
   
   .profile-details-container {
-    display: flex; /* Overrides the grid so they stack nicely on mobile */
-    flex-direction: column;
+    flex-direction: column; /* Stacks everything vertically on small screens */
     align-items: center;
-  }
-
-  .detail-block {
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 24px;
+    gap: 24px;
   }
 
   .company-block,
-  .location-block {
-    align-items: center; /* Ensures text is perfectly centered on phones */
+  .location-block,
+  .url-block {
+    width: 100%;
+    margin-top: 0;
+    order: unset; /* Resets the order on mobile so it flows naturally */
   }
 }
