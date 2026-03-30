@@ -300,16 +300,18 @@
 
   .detail-block {
     min-width: auto;
+    width: 100%;
+    margin-bottom: 24px;
   }
 
   .company-block,
-  .location-block {
-    width: 50%;
-    align-items: center;
-  }
-
+  .location-block,
   .url-block {
     width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 }
