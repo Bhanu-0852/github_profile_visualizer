@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import {HiOutlineSearch} from 'react-icons/hi'
 import {RiBuildingLine} from 'react-icons/ri'
+import {MdLocationOn} from 'react-icons/md'
+import {IoMdLink} from 'react-icons/io'
 import Header from '../Header'
 import SearchContext from '../../context/SearchContext'
 import './index.css'
@@ -175,6 +177,7 @@ class Home extends Component {
           <div className="detail-block url-block">
             <p className="detail-block-title">Blog</p>
             <div className="detail-item">
+              <IoMdLink className="detail-icon" />
               <a
                 href={blog}
                 target="_blank"
@@ -188,6 +191,7 @@ class Home extends Component {
           <div className="detail-block location-block">
             <p className="detail-block-title">Location</p>
             <div className="detail-item">
+              <MdLocationOn className="detail-icon" />
               <p className="detail-text">{location}</p>
             </div>
           </div>
