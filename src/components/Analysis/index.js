@@ -122,7 +122,7 @@ class Analysis extends Component {
   renderFailureView = () => (
     <div className="status-container">
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537512/Group_7522error_x15mag.png"
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963476/Group_7522errorView_wkqa35.png"
         alt="failure view"
         className="status-image"
       />
@@ -138,7 +138,7 @@ class Analysis extends Component {
   renderNoDataView = () => (
     <div className="status-container">
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537554/Empty_Box_Illustration_1no-data_gx6k0r.png"
+        src=""
         alt="no analysis"
         className="status-image"
       />
@@ -149,7 +149,7 @@ class Analysis extends Component {
   renderEmptyUsernameView = () => (
     <div className="status-container">
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537554/Empty_Box_Illustration_1no-data_gx6k0r.png"
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963475/Empty_Box_Illustration_1noData_y0o5wa.png"
         alt="empty analysis"
         className="status-image"
       />
