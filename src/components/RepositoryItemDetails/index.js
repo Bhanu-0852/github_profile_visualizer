@@ -92,7 +92,7 @@ class RepositoryItemDetails extends Component {
     <div className="status-container">
       <h1 className="landing-title">Github Profile Visualizer</h1>
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537512/Group_7522error_x15mag.png"
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963476/Group_7522errorView_wkqa35.png"
         alt="failure view"
         className="status-image"
       />
