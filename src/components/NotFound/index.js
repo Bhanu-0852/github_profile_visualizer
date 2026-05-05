@@ -4,7 +4,7 @@ import './index.css'
 const NotFound = () => (
   <div className="not-found-container">
     <img
-      src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537568/Group_7519page-not-found_hhbwb4.png"
+      src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963476/Group_7519pageNotFound_g50x9f.png"
       alt="page not found"
       className="not-found-image"
     />
