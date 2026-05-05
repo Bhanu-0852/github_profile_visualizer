@@ -91,7 +91,7 @@ class Home extends Component {
     <div className="status-container">
       <h1 className="landing-title">GitHub Profile Visualizer</h1>
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537154/Group_2profile_peun7r.png"
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963476/Group_2home_page_np24nj.png"
         alt="github profile visualizer home page"
         className="status-image"
       />
@@ -107,7 +107,7 @@ class Home extends Component {
   renderFailureView = () => (
     <div className="status-container">
       <img
-        src="https://res.cloudinary.com/dakquidzb/image/upload/v1774537512/Group_7522error_x15mag.png"
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963476/Group_7522errorView_wkqa35.png"
         alt="failure view"
         className="status-image"
       />
