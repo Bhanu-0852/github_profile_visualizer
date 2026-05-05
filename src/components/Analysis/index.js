@@ -138,7 +138,7 @@ class Analysis extends Component {
   renderNoDataView = () => (
     <div className="status-container">
       <img
-        src=""
+        src="https://res.cloudinary.com/dakquidzb/image/upload/v1777963475/Layer_3norepo_nhz36i.png"
         alt="no analysis"
         className="status-image"
       />
